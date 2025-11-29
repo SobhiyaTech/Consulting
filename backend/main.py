@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import auth, calendar, notifications
+from routers import auth, calendar, notifications, otp
 from config import settings
 
 app = FastAPI(
@@ -12,6 +12,7 @@ app = FastAPI(
 app.include_router(auth.router)
 app.include_router(calendar.router)
 app.include_router(notifications.router)
+app.include_router(otp.router)
 
 from fastapi.responses import HTMLResponse
 

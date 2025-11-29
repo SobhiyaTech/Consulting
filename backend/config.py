@@ -22,6 +22,9 @@ class Settings(BaseSettings):
     APP_ENV: str = "development"
     USE_MOCK_CALENDAR: bool = False
 
+    # Gemini API
+    GEMINI_API_KEY: Optional[str] = None
+
     class Config:
         env_file = ".env"
 
