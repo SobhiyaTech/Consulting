@@ -20,6 +20,7 @@ class Settings(BaseSettings):
 
     # App
     APP_ENV: str = "development"
+    USE_MOCK_CALENDAR: bool = False
 
     class Config:
         env_file = ".env"
